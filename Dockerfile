@@ -12,6 +12,8 @@ RUN wget "https://github.com/bnb-chain/bsc/releases/download/v1.2.12/testnet.zip
 RUN unzip testnet.zip
 RUN mv config.toml config-testnet.toml
 RUN mv genesis.json genesis-testnet.json
+RUN sed -ri '/(FileRoot|Level|MaxBytes|FilePath|Log)/s/^/#/g' config-mainnet.toml 
+RUN sed -ri '/(FileRoot|Level|MaxBytes|FilePath|Log)/s/^/#/g' config-testnet.toml
 RUN rm testnet.zip
 RUN rm mainnet.zip
 
