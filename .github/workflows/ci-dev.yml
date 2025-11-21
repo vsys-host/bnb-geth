@@ -20,7 +20,7 @@ jobs:
           flavor: |
             latest=false
           images: |
-            vsyshost/firod
+            vsyshost/bnb-geth
           tags: |
             type=raw,value=dev-{{branch}}-{{sha}}
       -
