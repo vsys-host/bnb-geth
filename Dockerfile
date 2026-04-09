@@ -6,8 +6,8 @@ RUN mv geth_linux geth
 RUN chmod -v u+x geth
 RUN wget "https://github.com/bnb-chain/bsc/releases/download/v1.7.2/mainnet.zip"
 RUN unzip mainnet.zip
-RUN mv config.toml config-mainnet.toml
-RUN mv genesis.json genesis-mainnet.json
+RUN mv mainnet/config.toml config-mainnet.toml
+RUN mv mainnet/genesis.json genesis-mainnet.json
 RUN wget "https://github.com/bnb-chain/bsc/releases/download/v1.7.2/testnet.zip"
 RUN unzip testnet.zip
 RUN mv testnet/config.toml config-testnet.toml
